@@ -11,11 +11,12 @@ public void fibonacciSeries()
 	while(true)
 	{
 		int temp=n1+n2;
+		if(temp>limit)
+			break;
 		System.out.print(temp+ "   ");
 		n1=n2;
 		n2=temp;
-		if(temp>=limit)
-			break;
+		
 		
 	}
 	

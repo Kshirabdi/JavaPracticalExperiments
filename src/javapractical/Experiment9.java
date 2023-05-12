@@ -36,9 +36,9 @@ public class Experiment9 {
 		obj.typeConversion(s);//integer
 		obj.typeConversion('k');
 		obj.typeConversion(228);
-		obj.typeConversion(655366l);//long
+		//obj.typeConversion(655366l);//long
 		obj.typeConversion(6.7f);//it will automatically the method accepting double variable as argument
-		obj.typeConversion(456676.78d);
+		//obj.typeConversion(456676.78d);
 		
 
 	}

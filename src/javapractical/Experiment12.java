@@ -12,15 +12,22 @@ class BoxingUnboxing
 
 		/** Boxing or Autoboxing denots convertion of primitive data types to the object of its corresponding wrapper class
 		 */
-		
-		Byte byt = 28;
-		Short s = new Short((short) 288);
-		Character c ='K';
-		Integer i=new Integer(12);
-		Long l= new Long(5228);
-		Float f = 78.9f;
-		Double d= new Double(228.456);
-		Boolean b=true;
+		byte by=28;
+		Byte byt = by;
+		short sh=228;
+		Short s = sh;
+		char ch='K';
+		Character c = new Character(ch);
+		int in=12;
+		Integer i=new Integer(in);
+		long lo=5228;
+		Long l= new Long(lo);
+		float fl=78.9f;
+		Float f = new Float(fl);
+		double doub=228.456;
+		Double d= new Double(doub);
+		boolean bool=true;
+		Boolean b=bool;
 		System.out.println("AUTOBOXING");
 		System.out.println("-----------");
 		System.out.println("value at Byte byt = "+byt);
@@ -39,7 +46,7 @@ class BoxingUnboxing
 		
 		Byte byt = new Byte((byte)(100));
 		byte byt1= byt;
-		Short s = new Short((short) 288);
+		Short s = new Short((short) 228);
 		short s1=s;
 		Character c ='K';
 		char c1=c;
@@ -75,5 +82,4 @@ public class Experiment12 {
 		ob.boxing();
 		ob.unboxing();
 	}
-
 }

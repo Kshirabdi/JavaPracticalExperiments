@@ -17,16 +17,16 @@ class AccessSpecifier
 	}
 }
 
-class passbyvalAndReference
+class PassbyvalAndReference
 {
 	int num1,num2;
 	void inputByValue(int n1,int n2)
 	{
 		num1=n1*10;
 		num2=n2*10;
-		System.out.println("value of primitive data type passed by value \nnum1 ="+num1+"   num2="+num2);
+		System.out.println("value of primitive data type passed by value(inside method) \nnum1 ="+num1+"   num2="+num2);
 	}
-	void inputByObject(passbyvalAndReference ob)
+	void inputByObject(PassbyvalAndReference ob)
 	{
 		num1=++ob.num1;
 		num2=++ob.num2;
@@ -45,12 +45,12 @@ public class Experiment10 {
 		
 		AccessSpecifier ob =new AccessSpecifier();
 		ob.show();
-		//ob.x; -> this line will show error because integer variable x is under private access specifier
+		//ob.x;// -> this line will show error because integer variable x is under private access specifier
 		
 		/** primitive data types are passed by value and objects are passed by reference
 		 */
 		
-		passbyvalAndReference object =new passbyvalAndReference();
+		PassbyvalAndReference object =new PassbyvalAndReference();
 		Scanner sc= new Scanner(System.in);
 		System.out.println("enter two numbers =");
 		int n1=sc.nextInt();
@@ -59,7 +59,7 @@ public class Experiment10 {
 		System.out.println("value of the arguments passed in main method= "+n1+"and "+n2);
 		//pass by refernce
 		//passing object as reference
-		passbyvalAndReference object2=new passbyvalAndReference();
+		PassbyvalAndReference object2=new PassbyvalAndReference();
 		object2.inputByObject(object);
 		System.out.println("value of the arguments passby reference = "+object.num1+"and "+object.num2);
 		sc.close();
@@ -67,9 +67,9 @@ public class Experiment10 {
 		/**use of final keyword
 		 */
 		@SuppressWarnings("unused")
-		final int x=10;
-		//x++;-> after declaring a variable as final we can not in change its value it will show error
-		
+		final int x1=10;
+		//x1++;//-> after declaring a variable as final we can not in change its value it will show error
+		System.out.println(x1);
 
 	}
 

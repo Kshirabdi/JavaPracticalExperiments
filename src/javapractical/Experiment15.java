@@ -16,20 +16,20 @@ class Parent1
 {
 	void p1Show1()
 	{
-		System.out.println("package1(same package)->parent2->default method called");
+		System.out.println("package1(same package)->parent1->default method called");
 	}
 	protected void p1Show2()
 	{
-		System.out.println("package1(same package)->parent2->protected method called");
+		System.out.println("package1(same package)->parent1->protected method called");
 	}
 	public void p1Show3()
 	{
-		System.out.println("package1(same package)->parent2->public method called");
+		System.out.println("package1(same package)->parent1->public method called");
 	}
 	@SuppressWarnings("unused")
 	private void p1Show4()
 	{
-		System.out.println("package1(same package)->parent2->private method called");
+		System.out.println("package1(same package)->parent1->private method called");
 	}
 	
 }
@@ -60,7 +60,7 @@ class SubClass2 extends Parent2
 		//super.show1();compilation error : The method show1() from the type Parent2 is not visible
 		super.show2();
 		super.show3();
-//		super.p1Show4();compilation error : The method show4() from the type Parent is not visible
+		//super.Show4();compilation error : The method Show4() is undefined for the type Parent2
 	}
 }
 public class Experiment15 {
@@ -70,6 +70,9 @@ public class Experiment15 {
 		sc1.AccessParent1();
 		SubClass2 sc2=new SubClass2 ();
 		sc2.AccessParent2();
+		@SuppressWarnings("unused")
+		Parent2 p2 = new Parent2();
+		//p2.show2();c.e->The method show2() from the type Parent2 is not visible
 	}
 
 }
