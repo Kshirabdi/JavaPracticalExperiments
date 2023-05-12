@@ -6,6 +6,7 @@
 package javapractical;
 class BoxingUnboxing
 {
+	@SuppressWarnings("removal")
 	void boxing() 
 	{
 
