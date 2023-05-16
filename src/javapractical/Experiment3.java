@@ -10,7 +10,7 @@ public class Experiment3 {
 		Scanner sc=new Scanner(System.in);
 		System.out.print("Enter a decimal number to find its coresponding binary number =");
 		int n=sc.nextInt();
-		System.out.println("binry of "+ n +" = "+Integer.toBinaryString(n));
+		System.out.println("Binry of "+ n +" = "+Integer.toBinaryString(n));
 		sc.close();
 	}
 
